@@ -5,16 +5,16 @@ import java.io.Serializable;
 import com.dev.superior.dsvendas.entities.Seller;
 
 public class SaleSumDto implements Serializable {
-	
+	private static final long serialVersionUID = 1L;
+
 	private String sellerName;
 	private Double sum;
 	
 	public SaleSumDto() {
 	}
-
+	
 	public SaleSumDto(Seller seller, Double sum) {
-		super();
-		this.sellerName = seller.getName();
+		sellerName = seller.getName();
 		this.sum = sum;
 	}
 

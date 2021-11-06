@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dev.superior.dsvendas.dto.SaleDto;
+import com.dev.superior.dsvendas.dto.SaleSuccessDto;
 import com.dev.superior.dsvendas.dto.SaleSumDto;
 import com.dev.superior.dsvendas.entities.Sale;
 import com.dev.superior.dsvendas.repositories.SaleRepository;
@@ -33,6 +34,11 @@ public class SaleService {
 	@Transactional(readOnly = true)
 	public 	List<SaleSumDto> amountGroupedBySeller() {
 		return saleRepository.amountGroupedBySeller();
+	}
+	
+	@Transactional(readOnly = true)
+	public 	List<SaleSuccessDto> successGroupedBySeller() {
+		return saleRepository.successGroupedBySeller();
 	}
 
 }
